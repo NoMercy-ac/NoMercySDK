@@ -418,12 +418,12 @@ namespace NoMercy
 
 // Public:
 #ifdef __DISABLE_NOMERCY__
-	static NOMERCY_API bool NM_Initialize(const uint32_t c_u32GameCode, const uint8_t c_u8NgVersion, const NoMercy::TNMCallback c_kMessageHandler) { return true; };
+	static NOMERCY_API bool NM_Initialize(const uint32_t c_u32GameCode, const uint8_t c_u8NmVersion, const NoMercy::TNMCallback c_kMessageHandler) { return true; };
 	static NOMERCY_API bool NM_Finalize() { return true; };
 	static NOMERCY_API bool NM_ForwardMessage(const int32_t c_s32Code, const void* c_lpMessage) { return true; };
 	static NOMERCY_API uint32_t NM_GetVersionNumber() { return 1; };
 #else
-	EXTERN_C NOMERCY_API bool NM_Initialize(const uint32_t c_u32GameCode, const uint8_t c_u8NgVersion, const NoMercy::TNMCallback c_kMessageHandler);
+	EXTERN_C NOMERCY_API bool NM_Initialize(const uint32_t c_u32GameCode, const uint8_t c_u8NmVersion, const NoMercy::TNMCallback c_kMessageHandler);
 	EXTERN_C NOMERCY_API bool NM_Finalize();
 	EXTERN_C NOMERCY_API bool NM_ForwardMessage(const int32_t c_s32Code, const void* c_lpMessage);
 	EXTERN_C NOMERCY_API uint32_t NM_GetVersionNumber();
